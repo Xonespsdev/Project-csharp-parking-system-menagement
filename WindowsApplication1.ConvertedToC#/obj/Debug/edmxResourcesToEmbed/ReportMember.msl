@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ParkingModelStoreContainer" CdmEntityContainer="ParkingEntities">
+    <EntitySetMapping Name="Member_Detail">
+      <EntityTypeMapping TypeName="ParkingModel.Member_Detail">
+        <MappingFragment StoreEntitySet="Member_Detail">
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="Licence" ColumnName="Licence" />
+          <ScalarProperty Name="LicenceName" ColumnName="LicenceName" />
+          <ScalarProperty Name="BName" ColumnName="BName" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Machine_Number" ColumnName="Machine_Number" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LName" ColumnName="LName" />
+          <ScalarProperty Name="CardID" ColumnName="CardID" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Packages">
+      <EntityTypeMapping TypeName="ParkingModel.Package">
+        <MappingFragment StoreEntitySet="Package">
+          <ScalarProperty Name="P_ID" ColumnName="P_ID" />
+          <ScalarProperty Name="P_Name" ColumnName="P_Name" />
+          <ScalarProperty Name="P_Detail" ColumnName="P_Detail" />
+          <ScalarProperty Name="P_Price" ColumnName="P_Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sell_BillMember">
+      <EntityTypeMapping TypeName="ParkingModel.Sell_BillMember">
+        <MappingFragment StoreEntitySet="Sell_BillMember">
+          <ScalarProperty Name="S_ID" ColumnName="S_ID" />
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="P_ID" ColumnName="P_ID" />
+          <ScalarProperty Name="S_Date" ColumnName="S_Date" />
+          <ScalarProperty Name="S_Time" ColumnName="S_Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

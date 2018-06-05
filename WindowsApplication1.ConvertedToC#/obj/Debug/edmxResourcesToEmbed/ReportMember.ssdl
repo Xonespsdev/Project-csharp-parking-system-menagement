@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ParkingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Member_Detail">
+    <Key>
+      <PropertyRef Name="MID" />
+    </Key>
+    <Property Name="MID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Licence" Type="nvarchar" MaxLength="20" />
+    <Property Name="LicenceName" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="BName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Model" Type="nvarchar" MaxLength="20" />
+    <Property Name="Machine_Number" Type="nvarchar" MaxLength="20" />
+    <Property Name="Color" Type="nvarchar" MaxLength="30" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="LName" Type="nvarchar" MaxLength="30" />
+    <Property Name="CardID" Type="nvarchar" MaxLength="20" />
+    <Property Name="Adress" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tel" Type="nvarchar" MaxLength="20" />
+    <Property Name="Email" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Package">
+    <Key>
+      <PropertyRef Name="P_ID" />
+    </Key>
+    <Property Name="P_ID" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="P_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="P_Detail" Type="nvarchar" MaxLength="150" />
+    <Property Name="P_Price" Type="nvarchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Sell_BillMember">
+    <Key>
+      <PropertyRef Name="S_ID" />
+    </Key>
+    <Property Name="S_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MID" Type="int" Nullable="false" />
+    <Property Name="P_ID" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="S_Date" Type="date" />
+    <Property Name="S_Time" Type="time" Precision="7" />
+  </EntityType>
+  <Association Name="fk_MID">
+    <End Role="Member_Detail" Type="Self.Member_Detail" Multiplicity="1" />
+    <End Role="Sell_BillMember" Type="Self.Sell_BillMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member_Detail">
+        <PropertyRef Name="MID" />
+      </Principal>
+      <Dependent Role="Sell_BillMember">
+        <PropertyRef Name="MID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_PID">
+    <End Role="Package" Type="Self.Package" Multiplicity="1" />
+    <End Role="Sell_BillMember" Type="Self.Sell_BillMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Package">
+        <PropertyRef Name="P_ID" />
+      </Principal>
+      <Dependent Role="Sell_BillMember">
+        <PropertyRef Name="P_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ParkingModelStoreContainer">
+    <EntitySet Name="Member_Detail" EntityType="Self.Member_Detail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Package" EntityType="Self.Package" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sell_BillMember" EntityType="Self.Sell_BillMember" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_MID" Association="Self.fk_MID">
+      <End Role="Member_Detail" EntitySet="Member_Detail" />
+      <End Role="Sell_BillMember" EntitySet="Sell_BillMember" />
+    </AssociationSet>
+    <AssociationSet Name="fk_PID" Association="Self.fk_PID">
+      <End Role="Package" EntitySet="Package" />
+      <End Role="Sell_BillMember" EntitySet="Sell_BillMember" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

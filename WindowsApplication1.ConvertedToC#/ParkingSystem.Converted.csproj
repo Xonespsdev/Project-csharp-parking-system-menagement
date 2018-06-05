@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9381FF58-D009-4F5E-9804-FAECD1F94A38}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WindowsApplication1.My.MyApplication</StartupObject>
+    <RootNamespace>WindowsApplication1</RootNamespace>
+    <AssemblyName>WindowsApplication</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>WindowsApplication.xml</DocumentationFile>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+    <Prefer32Bit>false</Prefer32Bit>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>WindowsApplication.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutocompleteMenu">
+      <HintPath>D:\Files_Bee\Projects Visual Studio\MusicStoreOnline\WindowsApplication1\bin\Debug\AutocompleteMenu.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>D:\Files_Bee\Projects Visual Studio\Tools\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutUsComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AboutUsComponent.Designer.cs">
+      <DependentUpon>AboutUsComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl1.Designer.cs">
+      <DependentUpon>CustomControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAboutus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmAboutus.Designer.cs">
+      <DependentUpon>frmAboutus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportCardBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportCardBill.Designer.cs">
+      <DependentUpon>frmReportCardBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportMember.Designer.cs">
+      <DependentUpon>frmReportMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHowtouse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmHowtouse.Designer.cs">
+      <DependentUpon>frmHowtouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberControlComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MemberControlComponent.Designer.cs">
+      <DependentUpon>MemberControlComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member_Detail.cs">
+      <DependentUpon>ReportMember.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Module1.cs" />
+    <Compile Include="My Project\Application.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.cs" />
+    <Compile Include="My Project\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MyNamespaceSupportForCSharp.cs" />
+    <Compile Include="Package.cs">
+      <DependentUpon>ReportMember.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PackageComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PackageComponent.Designer.cs">
+      <DependentUpon>PackageComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintCard.Designer.cs">
+      <DependentUpon>PrintCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportMember.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportMember.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportMember.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportMember.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportMember.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportMember.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="rptPrintCard.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPrintCard.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReportMember.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptReportMember.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SellPackageComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SellPackageComponent.Designer.cs">
+      <DependentUpon>SellPackageComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sell_BillMember.cs">
+      <DependentUpon>ReportMember.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlComponent.Designer.cs">
+      <DependentUpon>UserControlComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaterMark.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Threading.Tasks" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutUsComponent.resx">
+      <DependentUpon>AboutUsComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAboutus.resx">
+      <DependentUpon>frmAboutus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportCardBill.resx">
+      <DependentUpon>frmReportCardBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportMember.resx">
+      <DependentUpon>frmReportMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHowtouse.resx">
+      <DependentUpon>frmHowtouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberControlComponent.resx">
+      <DependentUpon>MemberControlComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageComponent.resx">
+      <DependentUpon>PackageComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintCard.resx">
+      <DependentUpon>PrintCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptPrintCard.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPrintCard.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReportMember.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptReportMember.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellPackageComponent.resx">
+      <DependentUpon>SellPackageComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlComponent.resx">
+      <DependentUpon>UserControlComponent.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="ReportMember.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ReportMember.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="packages.config" />
+    <None Include="ReportMember.edmx.diagram">
+      <DependentUpon>ReportMember.edmx</DependentUpon>
+    </None>
+    <None Include="Resources\Maximize16px.png" />
+    <None Include="Resources\restore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout Rounded Down_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Compress_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restore Window_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\First_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Last_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Long Arrow Left_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Right_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add New_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit Property_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainbackgound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ReportMember.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ReportMember.edmx</DependentUpon>
+      <LastGenOutput>ReportMember.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ReportMember.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ReportMember.edmx</DependentUpon>
+      <LastGenOutput>ReportMember.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxCrystalPrintControlLib">
+      <Guid>{62862E3F-F35B-455E-9459-49EAADE80A25}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="CrystalPrintControlLib">
+      <Guid>{62862E3F-F35B-455E-9459-49EAADE80A25}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
